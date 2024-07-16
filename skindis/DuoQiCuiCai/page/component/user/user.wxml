@@ -1,27 +1,26 @@
-<view class="container">
-  <form bindsubmit="submitForm">
-    <view class="container2">
-      <view>
-        <text class="login">登录</text>
-      </view>
-      <view class="form-item">
-        <text>邮箱</text>
-        <input type="text" name="email" placeholder="请输入邮箱" value="{{formData.email}}" />
-      </view>
-      <view class="form-item">
-        <text>姓名</text>
-        <input type="text" name="name" placeholder="请输入姓名" value="{{formData.name}}" />
-      </view>
-      <view class="form-item">
-        <text>公司地址：</text>
-        <input type="text" name="companyAddress" placeholder="请输入公司地址" value="{{formData.companyAddress}}" />
-      </view>
-      <view class="form-item">
-        <text>电话号码:</text>
-        <input type="text" name="phone" placeholder="请输入电话" value="{{formData.phone}}" />
-      </view>
-      <button formType="submit" class="button2">提交</button>
+<view class="form-container">
+    <text class="title">Welcome back</text>
+    <form class="form">
+        <input type="text" class="input" placeholder="Email" />
+        <input type="password" class="input" placeholder="Password" />
+        <text class="page-link">
+            <text class="page-link-label">Forgot Password?</text>
+        </text>
+        <button form-type="submit" class="form-btn">Log in</button>
+    </form>
+    <text class="sign-up-label">
+        Don't have an account?<text class="sign-up-link">Sign up</text>
+    </text>
+    <view class="buttons-container">
+        <view class="apple-login-button">
+            <icon type="success" class="apple-icon" />
+            <text>Log in with Apple</text>
+        </view>
+        <view class="google-login-button">
+            <icon type="success" class="google-icon" />
+            <text>Log in with Google</text>
+        </view>
     </view>
-  </form>
 </view>
+
 
