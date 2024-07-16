@@ -1,0 +1,22 @@
+.container {
+  padding: 20px;
+}
+.button{
+  padding: 16px 32px;
+  transition-duration: 0.4s;
+  font-size: 16px;
+  font-weight: bolder;
+  border: none;
+  border-radius: 5px;
+}
+.button1{
+  color:rgb(44,145,156);
+  background-color:rgb(83,255,207);
+}
+.button1:hover{
+  color:rgb(234,244,250);
+  background-color:rgb(60,158,214);
+  box-shadow: 0 12px 15px 1px rgba(0,0,0,0.24);
+}
+
+

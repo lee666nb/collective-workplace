@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.swiper {
+  width: 100%;
+  height: 200px; /* 根据需要调整高度 */
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+.text-area {
+  padding: 10px;
+  text-align: justify;
+}
+.text-content {
+  font-family: "Arial", sans-serif; /* 优雅的字体 */
+  color: #333; /* 深色字体更易阅读 */
+  padding: 20px;
+  line-height: 1.6; /* 行间距 */
+  font-size: 13px; /* 字体大小 */
+}

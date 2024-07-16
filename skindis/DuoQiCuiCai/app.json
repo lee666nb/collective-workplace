@@ -1,0 +1,49 @@
+{
+  "pages": [
+      "page/component/index",
+      "page/component/xianwei/xianwei",
+      "page/component/run/run",
+      "page/component/user/user"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "夺弃萃材",
+    "navigationBarBackgroundColor": "#007bff",
+    "backgroundColor": "#eeeeee",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#b7b7b7",
+    "selectedColor": "#87d0e3",
+    "borderStyle": "black",
+    "backgroundColor": "#006400",
+    "list": [{
+      "pagePath": "page/component/index",
+      "iconPath": "image/home.png",
+      "selectedIconPath": "image/home_selected.png",
+      "text": "首页"
+    }, {
+      "pagePath": "page/component/xianwei/xianwei",
+      "iconPath": "image/category.png",
+      "selectedIconPath": "image/category_selected.png",
+      "text": "皮肤病诊断"
+    }, {
+      "pagePath": "page/component/run/run",
+      "iconPath": "image/run.png",
+      "selectedIconPath": "image/run.png",
+      "text": "治疗方案"
+    }, {
+      "pagePath": "page/component/user/user",
+      "iconPath": "image/me.png",
+      "selectedIconPath": "image/me_selected.png",
+      "text": "个人中心"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}
