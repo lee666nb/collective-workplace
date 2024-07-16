@@ -11,19 +11,22 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-    "ignoreUploadUnusedFiles": true
+    "ignoreUploadUnusedFiles": true,
+    "coverView": false,
+    "enhance": false,
+    "showShadowRootInWxmlPanel": false,
+    "packNpmRelationList": []
   },
   "compileType": "miniprogram",
-  "libVersion": "2.25.3",
-  "projectname": "DuoQiCuiCai",
   "condition": {},
-  "packOptions": {
-    "ignore": [],
-    "include": []
-  },
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
   },
-  "appid": "touristappid"
+  "appid": "wx8dace481fc200135",
+  "libVersion": "2.25.3",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  }
 }

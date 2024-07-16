@@ -7,7 +7,7 @@
   ],
   "window": {
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "夺弃萃材",
+    "navigationBarTitleText": "首页",
     "navigationBarBackgroundColor": "#007bff",
     "backgroundColor": "#eeeeee",
     "enablePullDownRefresh": true

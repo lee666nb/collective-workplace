@@ -1,1 +1,1 @@
-<image src="/image/first.jpg" style="height: 500px;"></image>
+<image src="/image/first.jpg" style="height: 100% ; width: 100%;"></image>
