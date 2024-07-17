@@ -5,9 +5,7 @@ Page({
     interval: 3000,
     duration: 800,
   }
+  
+  
 })
-//   onLoad: function (options) {
 
-//     this.setData({ productlists: mockData.proudctlists });
-//   },
-// })

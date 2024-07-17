@@ -1,9 +1,12 @@
 {
   "pages": [
+    "page/component/login/login",
+    "page/component/register/register",
       "page/component/index",
       "page/component/xianwei/xianwei",
       "page/component/run/run",
       "page/component/user/user"
+     
   ],
   "window": {
     "navigationBarTextStyle": "white",
