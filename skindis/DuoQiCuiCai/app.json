@@ -5,8 +5,9 @@
       "page/component/index",
       "page/component/xianwei/xianwei",
       "page/component/run/run",
-      "page/component/user/user"
-     
+      "page/component/user/user",
+      "page/component/update/update"
+
   ],
   "window": {
     "navigationBarTextStyle": "white",

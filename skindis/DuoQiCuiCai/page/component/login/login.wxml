@@ -6,19 +6,20 @@
   
      <!-- 账号 -->
      <view class="phoneCs">
-       <image src="../../images/account.png" class="ph"></image>
-       <input placeholder="请输入账号" type="text" bindinput="content" />
+       <image src="/image/account.png" class="ph"></image>
+       <input placeholder="请输入用户名或邮箱" type="text" bindinput="content" />
      </view>
      <!-- 密码 -->
      <view class=passwordCs">
-       <image src="../../images/password.png" class="ps"></image>
-       <input placeholder="请输入密码" type="password" bindinput="password" />
+       <image src="/image/password.png" class="ps"></image>
+       <input placeholder="请输入密码" type="text" bindinput="password" password="{{pwdtype}}" />
+       <image src="{{image}}" mode="aspectFit" bindtap="goto" class="eye"></image>
      </view>
      <!-- 登录按钮 -->
      <view class="denglu">
        <button class="btn-dl" type="primary" bindtap="goadmin">登录</button>
        <view class="register" bindtap="register">
-        <navigator url="/page/component/register/register" >去注册</navigator>
+        <navigator url="/page/component/register/register" >没有账号？->去注册</navigator>
      </view>
      </view>
    

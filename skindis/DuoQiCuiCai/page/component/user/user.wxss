@@ -1,95 +1,15 @@
-.form-container {
-  width: 90%;
-  max-width: 350px;
-  height: auto;
-  background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  border-radius: 10px;
-  padding: 30px;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-.title {
-  text-align: center;
-  font-family: Arial, sans-serif;
-  margin: 20px 50px 20px 50px;
-  font-size: 24px;
-  font-weight: bold;
-  text-decoration: none;
-  
-}
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 15px;
-}
-.input {
-  margin-top: 20px;
-  border-radius: 8px;
-  border: 1px solid #c0c0c0;
-  padding: 12px;
-  font-size: 14px;
-}
-.page-link {
-  text-align: right;
-}
-.page-link-label {
-  color: #009688;
-  font-size: 12px;
-  cursor: pointer;
-}
-.form-btn {
-  padding: 12px;
-  margin-top: 25px;
-  font-family: Arial, sans-serif;
-  border-radius: 8px;
-  border: none;
-  background-color: #009688;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
-.sign-up-label {
-  text-align: center;
-  font-size: 14px;
-  color: #666;
-  text-decoration: none;
-  margin-top: 5px;
-}
-.sign-up-link {
-  color: #009688;
-  font-weight: bold;
-  cursor: pointer;
-}
-.buttons-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 20px;
-}
-.apple-login-button,
-.google-login-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
-  border-radius: 8px;
-  font-size: 14px;
-  cursor: pointer;
-  font-weight: bold;
-}
-.apple-login-button {
-  background-color: black;
-  color: white;
-}
-.google-login-button {
-  background-color: white;
-  color: black;
-  border: 1px solid #ccc;
-}
-.apple-icon,
-.google-icon {
-  font-size: 16px;
-  margin-right: 8px;
-}
+.info-box{
+    width: 100%;
+  }
+  .avatar-img {
+    margin-top: 20rpx;
+    width: 300rpx;
+    height: 300rpx;
+    border: 1px solid gray;
+    
+  }
+  .info-box>text{
+    display: block;
+    margin-left: 20%;
+    margin-top: 4%;
+  }

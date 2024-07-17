@@ -1,42 +1,37 @@
 Page({
-  data: {
-      formData: {
-          email: '',
-          name: '',
-          companyAddress: '',
-          phone: ''
-      }
-  },
-
-  submitForm: function(e) {
-      const that = this;
-      wx.request({
-          url: 'https://www.alujuneokl.cn:443/submit',
-          method: 'POST',
-          data: e.detail.value,
-          success: function(res) {
-              if(res.statusCode === 200) {
-                  wx.showToast({
-                      title: '提交成功',
-                      icon: 'success',
-                      duration: 2000
-                  });
-                  // 清除表单数据
-                  that.setData({
-                      'formData.email': '',
-                      'formData.name': '',
-                      'formData.companyAddress': '',
-                      'formData.phone': ''
-                  });
+ 
+    /**
+     * 页面的初始数据
+     */
+    data: {
+      nickName : "社会你班德",
+      gender : "男",
+      province : "浙江省",
+      city : "杭州",
+      country : "中国"
+    },
+   
+    updateMessageTap:function(){
+    
+      
+    },
+    logoutTap:function(){
+        wx.showActionSheet({
+            itemList:['确定'], //文字数组
+            success: (res) => {
+              switch(res.tapIndex) {
+                case 0:
+                  console.log('点击了确定')
+                  wx.redirectTo({
+                    url: '/page/component/login/login',
+                  })
+                  break;	
+               
               }
-          },
-          fail: function() {
-              wx.showToast({
-                  title: '提交失败',
-                  icon: 'none',
-                  duration: 2000
-              });
-          }
-      });
-  }
-});
+            },
+          })
+      
+      
+    },
+   
+  })

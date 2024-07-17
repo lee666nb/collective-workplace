@@ -5,25 +5,33 @@
    <view class="v2">
      <view class="dltext" style="width: 232rpx; height: 92rpx; display: block; box-sizing: border-box; left: 0rpx; top: -2rpx">注册</view>
   
+    <!-- 用户名 -->
+    <view class="adminCs">
+       <image src="/image/account.png" class="pw"></image>
+       <input placeholder="请输入用户名" type="text" bindinput="adminContent" />
+     </view>
      <!-- 邮箱 -->
      <view class="phoneCs">
-       <image src="../../images/account.png" class="ph"></image>
-       <input placeholder="请输入邮箱" type="number" bindinput="content" />
+       <image src="/image/email.png" class="ph"></image>
+       <input placeholder="请输入邮箱" type="text" bindinput="emailContent" />
      </view>
      <!-- 密码 -->
      <view class=passwordCs">
-       <image src="../../images/password.png" class="ps"></image>
-       <input placeholder="请输入密码" type="password" bindinput="password" />
+       <image src="/image/password.png" class="ps"></image>
+       <input placeholder="请输入密码" type="text" bindinput="password" password="{{pwdtype}}"/>
+       <image src="{{image}}" mode="aspectFit" bindtap="goto" class="eye"></image>
      </view>
      <!-- 重复密码 -->
      <view class=repasswordCs">
-       <image src="../../images/password.png" class="pt"></image>
-       <input placeholder="请再次输入密码" type="password" bindinput="password" />
+       <image src="/image/password.png" class="pt"></image>
+       <input placeholder="请再次输入密码" type="text" bindinput="repassword" password="{{repwdtype}}"/>
+       <image src="{{reimage}}" mode="aspectFit" bindtap="regoto" class="reye"></image>
      </view>
      <!-- 注册按钮 -->
      <view class="zhuce">
-       <button class="btn-dl" type="primary" bindtap="goadmin">注册</button>
+       <button class="btn-dl" type="primary" bindtap="zhuce">注册</button>
        <view class="register" bindtap="register">
+        <navigator url="/page/component/login/login" >已有账号？->去登录</navigator>
      </view>
      </view>
    </view>

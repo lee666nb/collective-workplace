@@ -12,7 +12,7 @@
     margin-top: 150rpx;
     left: 50rpx; 
     width: 545rpx;
-    height: 600rpx;
+    height: 1200rpx;
     background-color: white;
     border-radius: 50rpx;
   }
@@ -29,9 +29,35 @@
     line-height: 100rpx;
     letter-spacing: 2rpx;
   }
+  /* 用户图片+输入框+下划线的父容器view */
+  .v1 .v2 .adminCs{
+    margin-top: 200rpx;
+    margin-left: 25rpx;
+    position: absolute;
+    display: flex;
+    width:600rpx ;
+    height: 90rpx ;
+    background-color: rgb(250, 248, 248);
+    border-radius: 50rpx;
+    
+  }
+  /* 用户图标 */
+  .v1 .v2 .adminCs .pw{
+    margin-top: 20rpx;
+    margin-left: 30rpx;
+    width: 50rpx;
+    height: 55rpx;
+  }
+  /* 用户输入框 */
+  .v1 .v2 .adminCs input{
+    width: 400rpx;
+    font-size: 30rpx ;
+    margin-top: 25rpx;
+    margin-left: 30rpx;
+  }
   /* 手机图片+输入框+下划线的父容器view */
   .v1 .v2 .phoneCs{
-    margin-top: 200rpx;
+    margin-top: 350rpx;
     margin-left: 25rpx;
     position: absolute;
     display: flex;
@@ -45,8 +71,8 @@
   .v1 .v2 .phoneCs .ph{
     margin-top: 20rpx;
     margin-left: 30rpx;
-    width: 45rpx;
-    height: 45rpx;
+    width: 50rpx;
+    height: 55rpx;
   }
   /* 手机号输入框 */
   .v1 .v2 .phoneCs input{
@@ -57,7 +83,7 @@
   }
   /* 密码图标+输入框+小眼睛图标+下划线父容器view */
   .v1 .v2 .passwordCs{
-    margin-top: 350rpx;
+    margin-top: 500rpx;
     margin-left: 25rpx;
     position: absolute;
     display: flex;
@@ -76,10 +102,17 @@
   }
   /* 眼睛 图标*/
   .v1 .v2 .passwordCs .eye{
-    margin-top: 10rpx;
-    margin-left: 65rpx;
-    width: 55rpx;
-    height: 55rpx;
+    margin-top: 15rpx;
+    margin-left: 50rpx;
+    width: 100rpx;
+    height: 60rpx;
+  }
+  /* 眼睛 图标*/
+  .v1 .v2 .repasswordCs .reye{
+    margin-top: 15rpx;
+    margin-left: 50rpx;
+    width: 100rpx;
+    height: 60rpx;
   }
   /* 密码输入框 */
   .v1 .v2 .passwordCs input{
@@ -90,7 +123,7 @@
   }
    /* 确认密码图标+输入框+小眼睛图标+下划线父容器view */
    .v1 .v2 .repasswordCs{
-    margin-top: 500rpx;
+    margin-top: 650rpx;
     margin-left: 25rpx;
     position: absolute;
     display: flex;
@@ -120,16 +153,16 @@
     margin-top: 25rpx;
     margin-left: 30rpx;
   }
-  /* 登录按钮容器view */
+  /* 注册按钮容器view */
   .v1 .v2 .zhuce{
     width: 600rpx;
     height: 80rpx;
     position: absolute;
-    margin-top:700rpx;
+    margin-top:800rpx;
     margin-left:25rpx;
     
   }
-  /* 登录按钮 */
+  /* 注册按钮 */
   .v1 .v2 .zhuce button{
     padding: 0rpx;
     line-height: 70rpx;

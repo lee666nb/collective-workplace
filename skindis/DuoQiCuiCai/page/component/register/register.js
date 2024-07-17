@@ -3,93 +3,92 @@
 //获取应用实例
 const app = getApp()
  let username=''
+ let email=''
  let password=''
+ let repassword=''
 Page({
   data: {
     username: '',
+    email: '',
     password: '',
-    clientHeight:''
+    repassword: '',
+    pwdtype: true,
+    repwdtype: true,
+    image: '/image/closesee.png',
+    reimage: '/image/closesee.png'
   },
-  onLoad(){
-    var that=this
-    wx.getSystemInfo({ 
-      success: function (res) { 
-        console.log(res.windowHeight)
-          that.setData({ 
-              clientHeight:res.windowHeight
-        }); 
-      } 
-    }) 
-  },
-  //协议
-  goxieyi(){
-   wx.navigateTo({
-     url: '/pages/oppoint/oppoint',
-   })
-  },
+
   //获取输入款内容
-  content(e){
+  adminContent(e){
     username=e.detail.value
+  },
+  emailContent(e){
+    email=e.detail.value
   },
   password(e){
     password=e.detail.value
   },
-  //登录事件
-  goadmin(){
-    let flag = false  //表示账户是否存在,false为初始值
+  repassword(e){
+    repassword=e.detail.value
+  },
+  //注册事件
+  zhuce(){
     if(username=='')
     {
       wx.showToast({
         icon:'none',
-        title: '账号不能为空',
+        title: '用户名不能为空',
       })
     }else if(password==''){
       wx.showToast({
         icon:'none',
         title: '密码不能为空',
       })
-    }else{
-      wx.cloud.database().collection('adminShop')
-      .get({
-        success:(res)=>{
-          console.log(res.data)
-          let admin=res.data
-          for (let i = 0; i < admin.length; i++) {  //遍历数据库对象集合
-            if (username === admin[i].username) { //账户已存在
-              flag=true;
-              if (password !== admin[i].password) {  //判断密码正确与否
-                wx.showToast({  //显示密码错误信息
-                  title: '密码错误！！',
-                  icon: 'error',
-                  duration: 2500
-                });
-               break;
-              } else {
-                wx.showToast({  //显示登录成功信息
-                  title: '登陆成功！！',
-                  icon: 'success',
-                  duration: 2500
-                })
-                flag=true;
-                wx.setStorageSync('admin', password)
-               wx.navigateTo({
-                 url: '/pages/admin/admin',
-               })
-                break;
-              }
-            }
-          };
-          if(flag==false)//遍历完数据后发现没有该账户
-          {
-            wx.showToast({
-              title: '该用户不存在',
-              icon: 'error',
-              duration: 2500
-            })
-          }
-        }
+    }else if(email==''){
+        wx.showToast({
+          icon:'none',
+          title: '邮箱不能为空',
+        })
+      }else if(username!=''&&email!=''&&password!=''&&repassword!=''){
+        wx.showToast({
+            title: "注册成功",   
+            icon: 'success',   
+            duration: 500,        
+            })           
+            setTimeout(function () {         
+            wx.reLaunch({          
+            url: '/page/component/login/login',          
+            })       
+            }, 500)
+         }
+  },
+  goto() {
+    if (this.data.pwdtype == true) {
+      this.setData({
+        pwdtype: false,
+        image: '/image/opensee.png'
+      })
+    } else {
+      this.setData({
+        pwdtype: true,
+        image: '/image/closesee.png'
       })
     }
+ 
   },
+  regoto() {
+    if (this.data.repwdtype == true) {
+      this.setData({
+        repwdtype: false,
+        image: '/image/opensee.png'
+      })
+    } else {
+      this.setData({
+        repwdtype: true,
+        image: '/image/closesee.png'
+      })
+    }
+ 
+  }
 })
  

@@ -12,7 +12,7 @@
     margin-top: 150rpx;
     left: 50rpx; 
     width: 545rpx;
-    height: 600rpx;
+    height: 1200rpx;
     background-color: white;
     border-radius: 50rpx;
   }
@@ -76,10 +76,10 @@
   }
   /* 眼睛 图标*/
   .v1 .v2 .passwordCs .eye{
-    margin-top: 10rpx;
-    margin-left: 65rpx;
-    width: 55rpx;
-    height: 55rpx;
+    margin-top: 15rpx;
+    margin-left: 50rpx;
+    width: 100rpx;
+    height: 60rpx;
   }
   /* 密码输入框 */
   .v1 .v2 .passwordCs input{
