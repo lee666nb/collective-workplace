@@ -24,3 +24,54 @@
   line-height: 1.6; /* 行间距 */
   font-size: 13px; /* 字体大小 */
 }
+
+
+
+.text-content {
+  padding: 16px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 16px;
+}
+
+.card-text {
+  margin-top: 16px;
+}
+
+.heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.subheading {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.list {
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+.list text {
+  display: block;
+  margin-bottom: 8px;
+}
+
+strong {
+  color: #2c7a7b; /* 强调颜色 */
+}
