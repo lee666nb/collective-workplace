@@ -1,52 +1,110 @@
-@import '../common/common.wxss';
-swiper {
-    height: 421.5rpx;
-}
-swiper-item image {
-    width: 100%;
-    height: 100%;
-}
-.select-title,.newest-title{
-    width: 100%;
-    padding:30rpx 0;
-    height: 40rpx;
-    color: #6bc4df;
+ 
+/* 容器样式 */  
+.container {  
+    width: 90%;  
+    max-width: 900px;  
+    background-color: #fff;  
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  
+    border-radius: 15px;  
+    padding: 30rpx; 
+    padding-bottom: 220rpx; 
+    overflow: hidden;  
+    margin: 0 auto; /* 居中容器 */  
+}  
+  
+/* 头部样式 */  
+.header {  
+    display: flex;  
+    align-items: center;  
+    margin-bottom: 20px;  
+    padding-bottom: 20px;  
+    border-bottom: 1px solid #e0e0e0;  
+}  
+  
+.header image {  
+    width: 50px;  
+    height: 50px;  
+    margin-right: 15px; /* 给标题留出空间 */  
+}  
+  
+.title {  
+    font-size: 36px;  
+    font-weight: 700;  
+    color: #333;  
+}  
+  
+/* 主内容区样式 */  
+.main {  
+    width: 100%;  
+}  
+  
+.welcome {  
+    text-align: center;  
+    margin-bottom: 30px;  
+}  
+  
+.welcome-text {  
+    font-size: 24px;  
+    font-weight: 700;  
+    margin-bottom: 10rpx;  
+    color: #2c3e50;  
+}  
+  
+.description {  
+    font-size: 16px;  
+    color: #7f8c8d;  
+}  
+  
+/* 功能卡片样式 */  
+.feature-cards {  
+    display: flex;  
+    justify-content: space-around;  
+    flex-wrap: wrap;  
+}  
+  
+.card {  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    background-color: #fff;  
+    border-radius: 10px;  
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);  
+    padding: 30px;  
+    width: 250px;  
+    height: 30px;
+    cursor: pointer;  
+    transition: transform 0.3s, box-shadow 0.3s;  
+}  
+  
+.card:active {  
+    /* 替代:hover，因为微信小程序不支持:hover */  
+    transform: translateY(-5px);  
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);  
+}  
+  
+.card-title {  
+    font-size: 20px;  
+    font-weight: 700;  
+    margin-bottom: 20rpx;  
+    color: #2c3e50;  
     text-align: center;
+}  
+  
+.card-description {  
+    font-size: 14px;  
+    color: #7f8c8d;  
+    text-align: center;  
+}  
+  
+/* 底部样式 */  
+.footer {  
+    margin-top: 20px;  
+    text-align: center;  
+    padding-top: 10px;  
+    border-top: 1px solid #e0e0e0;  
+}  
+  
+.footer-text {  
+    font-size: 14px;  
+    color: #999;  
 }
-.select-top-small{
-    width: 375rpx;
-    height: 375rpx;
-    float: left;
-}
-.select-bottom,.select-top{
-    width: 100%;
-    height: 375rpx;
-}
-.select-top-small image,.select-bottom image,.select-top-small navigator,.select-bottom navigator{
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-.newest-box{
-    padding:0 40rpx;
-}
-.newest-box .newest-list{
-    display: inline-block;
-    width: 325rpx;
-    height: 355rpx;
-    margin:20rpx 20rpx 30rpx 0;
-    text-align: center;
-}
-.newest-box .newest-list:nth-child(2n){
-    margin-right: 0;
-}
-.newest-box .newest-list image{
-    width: 315rpx;
-    height: 315rpx;
-     border-radius: 10px;
-    margin: 20rpx 0 10rpx;
-}
-.newest-box .newest-list .newest-text{
-    font-size: 32rpx;
-}
-
