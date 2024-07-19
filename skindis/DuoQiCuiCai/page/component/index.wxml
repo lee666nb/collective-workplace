@@ -1,3 +1,4 @@
+
 <view class="container">  
   <view class="header">  
     <image src="your-logo.png" mode="widthFix"></image> <!-- 假设有logo -->  
@@ -37,4 +38,4 @@
   <view class="footer">  
     <text class="footer-text">皮肤病预测专家 © 2024</text>  
   </view>  
-</view>
+</view> 
