@@ -18,7 +18,7 @@
      <view class="denglu">
        <button class="btn-dl" type="primary" bindtap="goadmin">登录</button>
        <view class="register" bindtap="register">
-        <navigator url="/page/component/register/register" >没有账号？->去注册</navigator>
+        <navigator url="/page/component/register/register" class="navagator" >没有账号？->去注册</navigator>
      </view>
      </view>
    

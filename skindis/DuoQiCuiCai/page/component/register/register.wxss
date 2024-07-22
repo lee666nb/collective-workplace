@@ -1,5 +1,8 @@
 /* page/component/login/login.wxss */
 /* pages/login/login.wxss *//* 最大的父元素 */
+.navagator{
+  font-size: smaller;
+}
 .v1{
     display: block;
     position:absolute;

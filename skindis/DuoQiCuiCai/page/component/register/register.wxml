@@ -31,7 +31,7 @@
      <view class="zhuce">
        <button class="btn-dl" type="primary" bindtap="zhuce">注册</button>
        <view class="register" bindtap="register">
-        <navigator url="/page/component/login/login" >已有账号？->去登录</navigator>
+        <navigator url="/page/component/login/login" class="navagator">已有账号？->去登录</navigator>
      </view>
      </view>
    </view>

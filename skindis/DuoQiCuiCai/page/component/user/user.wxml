@@ -1,22 +1,38 @@
 <view class="container">
- 
- <view class="info-box">
-   <view style="text-align: center;margin-bottom:10%;">
-     <image class="avatar-img" src="/image/微信头像.png" />
-   </view>
- 
-   <text>昵称： {{nickName}}</text>
-   <text>性别： {{gender}}</text>
-   <text>国家： {{country}}</text>
-   <text>省份： {{province}}</text>
-   <text>城市： {{city}}</text>
- </view>
-
- <view style="margin-top:5%"> 
+  <view class="header">
+  <image src="/image/微信头像.png" class="avatar"></image>
+    <text class="college">你的名字</text>
+  </view>
+  <view class="menu">
+    <view class="menu-item">
+      <image src="/image/class.png" class="icon"></image>
+      <text class="text">年龄</text>
+      <text class="info">你的年龄</text>
+    </view>
+    <view class="menu-item">
+      <image src="/image/academy.png" class="icon"></image>
+      <text class="text">患病时长</text>
+      <text class="info">你的患病时长</text>
+    </view>
+  </view>
+  <view class="menu">
+    <view class="menu-item">
+      <image src="/image/aboutUs.png" class="icon"></image>
+      <text class="text">关于我们</text>
+    </view>
+    <view class="menu-item">
+      <image src="/image/update.png" class="icon"></image>
+      <text class="text">更新日志</text>
+    </view>
+    <view class="menu-item">
+      <image src="/image/test.png" class="icon"></image>
+      <text class="text">注销账号</text>
+    </view>
+    <view style="margin-top:10%"> 
    <button bindtap="updateMessageTap" type="primary">修改个人信息</button>
  </view>
- <view style="margin-top:5%"> 
+    <view style="margin-top:5%"> 
    <button bindtap="logoutTap" type="warn">退出登录</button>
  </view>
- 
+  </view>
 </view>
