@@ -1,41 +1,38 @@
-<!--page/component/login/login.wxml-->
-<view class="v1" style="height:{{clientHeight?clientHeight+'px':'auto'}}">
- 
- <!-- v2父容器  子view使用绝对布局 -->
-   <view class="v2">
-     <view class="dltext" style="width: 232rpx; height: 92rpx; display: block; box-sizing: border-box; left: 0rpx; top: -2rpx">注册</view>
-  
-    <!-- 用户名 -->
-    <view class="adminCs">
-       <image src="/image/account.png" class="pw"></image>
-       <input placeholder="请输入用户名" type="text" bindinput="adminContent" />
-     </view>
-     <!-- 邮箱 -->
-     <view class="phoneCs">
-       <image src="/image/email.png" class="ph"></image>
-       <input placeholder="请输入邮箱" type="text" bindinput="emailContent" />
-     </view>
-     <!-- 密码 -->
-     <view class=passwordCs">
-       <image src="/image/password.png" class="ps"></image>
-       <input placeholder="请输入密码" type="text" bindinput="password" password="{{pwdtype}}"/>
-       <image src="{{image}}" mode="aspectFit" bindtap="goto" class="eye"></image>
-     </view>
-     <!-- 重复密码 -->
-     <view class=repasswordCs">
-       <image src="/image/password.png" class="pt"></image>
-       <input placeholder="请再次输入密码" type="text" bindinput="repassword" password="{{repwdtype}}"/>
-       <image src="{{reimage}}" mode="aspectFit" bindtap="regoto" class="reye"></image>
-     </view>
-     <!-- 注册按钮 -->
-     <view class="zhuce">
-       <button class="btn-dl" type="primary" bindtap="zhuce">注册</button>
-       <view class="register" bindtap="register">
-        <navigator url="/page/component/login/login" class="navagator">已有账号？->去登录</navigator>
-     </view>
-     </view>
-   </view>
- </view>
-  
-
-  
+<view class="content">
+  <view class="row-input">
+    <text>电话号码</text>
+    <view class="input-box">
+      <input placeholder="请输入您的电话号码" maxlength="11" />
+    </view>
+  </view>
+  <view class="row-input2">
+    <text>验证码</text>
+    <view class="input-box2">
+      <input class="input2" placeholder="请输入您的验证码" maxlength="6" />
+      <view class="code">
+        <text>获取验证码</text>
+      </view>
+    </view>
+  </view>
+  <view class="row-input">
+    <text>登录密码</text>
+    <view class="input-box">
+      <input placeholder="请输入您的登录密码" maxlength="18" />
+    </view>
+  </view>
+  <view class="row-input">
+    <text>确认密码</text>
+    <view class="input-box">
+      <input placeholder="再次输入登录密码" maxlength="18" />
+    </view>
+  </view>
+  <view class="row-input">
+    <text>邀请码</text>
+    <view class="input-box">
+      <input placeholder="请输入您的邀请码" maxlength="10" />
+    </view>
+  </view>
+  <view class="register-btn">
+    注册
+  </view>
+</view>

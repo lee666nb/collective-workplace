@@ -1,3 +1,12 @@
 {
-  "usingComponents": {}
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "登录系统",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+  }
 }

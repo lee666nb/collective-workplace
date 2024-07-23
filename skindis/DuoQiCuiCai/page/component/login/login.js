@@ -1,73 +1,35 @@
-//index.js
-//获取应用实例
-const app = getApp()
- let username=''
- let password=''
 Page({
   data: {
-    username: '',
-    password: '',
-    clientHeight:'',
-    pwdtype: true,
-    image: '/image/closesee.png'
+    tabIndex: 0 // tab下标
+  },
+  
+  // tab点击
+  tabClick: function(e) {
+    this.setData({
+      tabIndex: e.currentTarget.dataset.id
+    });
+  },
+  
+  // 获取验证码
+  getCode: function() {
+    wx.showToast({
+      title: "获取验证码",
+      icon: "none"
+    });
   },
 
-
-
-  //获取输入款内容
-  content(e){
-    username=e.detail.value
+  // 注册
+  register: function() {
+    wx.navigateTo({
+      url: '/page/register/register'
+    });
   },
-  password(e){
-    password=e.detail.value
-  },
-  //登录事件
-  goadmin(){
-    if(username=='')
-    {
-      wx.showToast({
-        icon:'none',
-        title: '账号不能为空',
-      })
-    }else if(password==''){
-      wx.showToast({
-        icon:'none',
-        title: '密码不能为空',
-      })
-    }else if(username=='admin'&&password=='123456'){
-        username='';
-        password='';
-        wx.showToast({
-            title: "登录成功",   
-            icon: 'success',   
-            duration: 1000,        
-            })           
-            setTimeout(function () {         
-            wx.reLaunch({          
-            url: '/page/component/index',          
-            })       
-            }, 1000)
-    }else{
-        wx.showToast({
-            icon:'none',
-            title: '账号或者密码错误',
-          })
-    }
-
-  },
-  goto() {
-    if (this.data.pwdtype == true) {
-      this.setData({
-        pwdtype: false,
-        image: '/image/opensee.png'
-      })
-    } else {
-      this.setData({
-        pwdtype: true,
-        image: '/image/closesee.png'
-      })
-    }
- 
+  
+  // 登录
+  login: function() {
+    wx.showToast({
+      title: "登录",
+      icon: "none"
+    });
   }
 })
- 
