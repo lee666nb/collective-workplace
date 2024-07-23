@@ -58,3 +58,59 @@
   font-size: 14px;
   color: #999999;
 }
+
+/* modal 样式 */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+  }
+  
+  .modal-header {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .modal-body input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #000; /* 设置输入框文本颜色为黑色 */
+  }
+  
+  /* 设置占位符样式 */
+  .input-field::placeholder {
+    color: #ccc; /* 设置占位符颜色为浅色 */
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .input-label {
+    width: 50px;
+    font-size: 16px;
+  }

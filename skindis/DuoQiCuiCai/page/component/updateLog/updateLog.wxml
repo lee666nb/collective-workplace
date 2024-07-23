@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="header">
+    <text class="title">更新日志</text>
+  </view>
+  <view class="content">
+    <block wx:for="{{logs}}" wx:key="version">
+      <view class="log-item">
+        <text class="version">{{item.version}} - {{item.date}}</text>
+        <text class="details">{{item.details}}</text>
+      </view>
+    </block>
+  </view>
+</view>

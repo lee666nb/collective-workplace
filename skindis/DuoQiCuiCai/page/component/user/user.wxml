@@ -1,38 +1,70 @@
 <view class="container">
   <view class="header">
-  <image src="/image/微信头像.png" class="avatar"></image>
-    <text class="college">你的名字</text>
+    <image src="/image/微信头像.png" class="avatar"></image>
+    <text class="college">{{ userInfo.name }}</text>
   </view>
   <view class="menu">
     <view class="menu-item">
+      <image src="/image/gender.png" class="icon"></image>
+      <text class="text">性别</text>
+      <text class="info">{{ userInfo.gender }}</text>
+    </view>
+    <view class="menu-item">
       <image src="/image/class.png" class="icon"></image>
       <text class="text">年龄</text>
-      <text class="info">你的年龄</text>
+      <text class="info">{{ userInfo.age }}</text>
     </view>
     <view class="menu-item">
       <image src="/image/academy.png" class="icon"></image>
       <text class="text">患病时长</text>
-      <text class="info">你的患病时长</text>
+      <text class="info">{{ userInfo.duration }}</text>
     </view>
   </view>
   <view class="menu">
     <view class="menu-item">
+      <image src="/image/updatemessage.png" class="icon"></image>
+      <text class="text" bindtap="showModal">修改个人信息</text>
+    </view>
+    <view class="menu-item">
       <image src="/image/aboutUs.png" class="icon"></image>
-      <text class="text">关于我们</text>
+      <text class="text" bindtap="navigateToAboutUs">关于我们</text>
     </view>
     <view class="menu-item">
       <image src="/image/update.png" class="icon"></image>
-      <text class="text">更新日志</text>
+      <text class="text" bindtap="navigateToUpdateLog">更新日志</text>
     </view>
     <view class="menu-item">
       <image src="/image/test.png" class="icon"></image>
-      <text class="text">注销账号</text>
+      <text class="text" bindtap="logoutTap">注销账号</text>
     </view>
-    <view style="margin-top:10%"> 
-   <button bindtap="updateMessageTap" type="primary">修改个人信息</button>
- </view>
-    <view style="margin-top:5%"> 
-   <button bindtap="logoutTap" type="warn">退出登录</button>
- </view>
+  </view>
+  <view wx:if="{{showModal}}" class="modal">
+    <view class="modal-content">
+      <view class="modal-header">
+        <text>编辑个人信息</text>
+      </view>
+      <view class="modal-body">
+        <view class="input-group">
+          <text class="input-label">姓名:</text>
+          <input class="input-field" placeholder="{{ userInfo.name }}"  bindinput="handleNameInput" />
+        </view>
+        <view class="input-group">
+          <text class="input-label">性别:</text>
+          <input class="input-field" placeholder="{{ userInfo.gender }}"  bindinput="handleGenderInput"/>
+        </view>
+        <view class="input-group">
+          <text class="input-label">年龄:</text>
+          <input class="input-field" placeholder="{{ userInfo.age }}"  bindinput="handleAgeInput"/>
+        </view>
+        <view class="input-group">
+          <text class="input-label">患病时长:</text>
+          <input class="input-field" placeholder="{{ userInfo.duration }}"  bindinput="handleDurationInput" />
+        </view>
+      </view>
+      <view class="modal-footer">
+        <button bindtap="hideModal">取消</button>
+        <button bindtap="saveInfo">保存</button>
+      </view>
+    </view>
   </view>
 </view>

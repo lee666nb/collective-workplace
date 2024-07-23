@@ -6,7 +6,8 @@
       "page/component/xianwei/xianwei",
       "page/component/run/run",
       "page/component/user/user",
-      "page/component/update/update"
+      "page/component/aboutUs/aboutUs",
+      "page/component/updateLog/updateLog"
 
   ],
   "window": {
