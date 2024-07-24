@@ -7,8 +7,8 @@
       "page/component/run/run",
       "page/component/user/user",
       "page/component/aboutUs/aboutUs",
-      "page/component/updateLog/updateLog"
-
+      "page/component/updateLog/updateLog",
+       "page/component/findpassword/findpassword"
   ],
   "window": {
     "navigationBarTextStyle": "white",
@@ -51,4 +51,5 @@
     "downloadFile": 10000
   },
   "debug": false
+  
 }

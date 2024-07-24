@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/register/register"
+    "/page/component/register/register"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
@@ -9,4 +9,5 @@
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light"
   }
+
 }

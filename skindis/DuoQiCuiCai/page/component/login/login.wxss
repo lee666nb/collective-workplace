@@ -123,3 +123,9 @@ input {
   font-size: 28rpx;
   font-weight: bold;
 }
+.eye{
+    margin-top: 15rpx;
+    margin-left: 50rpx;
+    width: 100rpx;
+    height: 60rpx;
+  }
