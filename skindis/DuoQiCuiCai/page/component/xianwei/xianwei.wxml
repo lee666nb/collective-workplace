@@ -1,9 +1,8 @@
-
 <view class="container">
-
-  <button class="button button1" bindtap="chooseImage">上传皮肤病图片</button>
-  <image src="{{imagePath}}" mode="widthFix" style="width: 100%;"></image>
- <image src="/image/素材1.jpg"></image>
-  <button class=" button button1"bindtap="diagnose">诊断</button>
-  <text>{{diseaseInfo}}</text>
+  <button bindtap="chooseImage">上传图片</button>
+  <view class="upload-area" bindtap="chooseImage">
+    <image wx:if="{{imagePath}}" src="{{imagePath}}" mode="aspectFit" class="uploaded-image"/>
+    <text wx:if="{{!imagePath}}" class="plus-sign">+</text>
+  </view>
+  <button bindtap="startPrediction">开始预测</button>
 </view>
