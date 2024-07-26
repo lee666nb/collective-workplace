@@ -1,33 +1,37 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40rpx; /* 增大 margin-top */
 }
 
 .upload-area {
-  width: 300px;
-  height: 300px;
-  border: 2px dashed #ccc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  position: relative;
-  background-color: #f9f9f9;
+    width: 500rpx; /* 增大宽度 */
+    height: 500rpx; /* 增大高度 */
+    border: 4rpx dashed #ccc; /* 增大边框 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40rpx; /* 增大 margin-top */
+    position: relative;
+    background-color: #f9f9f9;
 }
 
 .plus-sign {
-  font-size: 50px;
-  color: #ccc;
+    font-size: 70rpx; /* 增大字体大小 */
+    color: #ccc;
 }
 
 .uploaded-image {
-  max-width: 100%;
-  max-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .slider-container {
-  width: 300px;
-  margin-top: 20px;
+    width: 500rpx; /* 增大宽度 */
+    margin-top: 40rpx; /* 增大 margin-top */
+}
+
+canvas {
+    display: none;
 }

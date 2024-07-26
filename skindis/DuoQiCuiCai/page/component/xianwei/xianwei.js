@@ -1,104 +1,118 @@
 Page({
-  data: {
-    imagePath: '',
-    brightness: 0,
-    contrast: 1
-  },
-
-  chooseImage: function() {
-    const that = this;
-    wx.chooseImage({
-      count: 1,
-      sizeType: ['original', 'compressed'],
-      sourceType: ['album', 'camera'],
-      success: function(res) {
-        const tempFilePaths = res.tempFilePaths;
-        that.setData({
-          imagePath: tempFilePaths[0]
-        }, () => {
-          that.updateImage();
+    data: {
+      imagePath: '',
+      filteredImagePath: '',
+      brightness: 0,
+      contrast: 1,
+      canvasWidth: 0,
+      canvasHeight: 0
+    },
+  
+    chooseMedia() {
+        const that = this;
+        wx.chooseMedia({
+          count: 1,
+          mediaType: ['image'],
+          sourceType: ['album', 'camera'],
+          success(res) {
+            const tempFilePath = res.tempFiles[0].tempFilePath;
+            console.log('Selected image path:', tempFilePath); // 添加这一行
+            wx.getImageInfo({
+              src: tempFilePath,
+              success(imgRes) {
+                console.log('Image info:', imgRes); // 添加这一行
+                that.setData({
+                  imagePath: tempFilePath,
+                  canvasWidth: imgRes.width,
+                  canvasHeight: imgRes.height
+                }, () => {
+                  that.applyFilters();  // 初次加载图片时进行滤镜应用
+                });
+              },
+              fail(err) {
+                console.error('getImageInfo failed:', err);
+              }
+            });
+          },
+          fail(err) {
+            console.error('chooseMedia failed:', err);
+          }
         });
-      }
-    });
-  },
-
-  onBrightnessChange: function(e) {
-    this.setData({
-      brightness: e.detail.value
-    });
-    this.updateImage();
-  },
-
-  onContrastChange: function(e) {
-    this.setData({
-      contrast: e.detail.value
-    });
-    this.updateImage();
-  },
-
-  updateImage: function() {
-    const that = this;
-    const ctx = wx.createCanvasContext('imageCanvas');
-    wx.getImageInfo({
-      src: this.data.imagePath,
-      success: function(res) {
-        const width = res.width;
-        const height = res.height;
-        ctx.drawImage(that.data.imagePath, 0, 0, width, height);
-        ctx.draw(false, () => {
-          wx.canvasGetImageData({
-            canvasId: 'imageCanvas',
-            x: 0,
-            y: 0,
-            width: width,
-            height: height,
-            success: function(res) {
-              const imageData = res.data;
-              const adjustedData = that.adjustImageData(imageData, width, height, that.data.brightness, that.data.contrast);
-              wx.canvasPutImageData({
-                canvasId: 'imageCanvas',
-                data: adjustedData,
-                x: 0,
-                y: 0,
-                width: width,
-                height: height,
-                success: function() {
-                  wx.canvasToTempFilePath({
-                    canvasId: 'imageCanvas',
-                    success: function(result) {
-                      that.setData({
-                        imagePath: result.tempFilePath
-                      });
-                    }
-                  });
-                }
-              });
-            }
-          });
+      },
+  
+    onBrightnessChange(e) {
+      this.setData({
+        brightness: e.detail.value
+      });
+      this.applyFilters();
+    },
+  
+    onContrastChange(e) {
+      this.setData({
+        contrast: e.detail.value
+      });
+      this.applyFilters();
+    },
+  
+    applyFilters() {
+      const { imagePath, brightness, contrast, canvasWidth, canvasHeight } = this.data;
+      if (!imagePath || canvasWidth === 0 || canvasHeight === 0) return;
+  
+      wx.createSelectorQuery()
+        .select('#imageCanvas')
+        .fields({ node: true, size: true })
+        .exec((res) => {
+          const canvas = res[0].node;
+          const ctx = canvas.getContext('2d');
+  
+          const dpr = wx.getWindowInfo().pixelRatio;
+          canvas.width = canvasWidth * dpr;
+          canvas.height = canvasHeight * dpr;
+          ctx.scale(dpr, dpr);
+  
+          const img = canvas.createImage();
+          img.onload = () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.filter = `brightness(${brightness + 100}%) contrast(${contrast})`;
+            ctx.drawImage(img, 0, 0, canvasWidth, canvasHeight);
+  
+            wx.canvasToTempFilePath({
+              canvas,
+              success: (res) => {
+                this.setData({
+                  filteredImagePath: res.tempFilePath
+                });
+              },
+              fail: (err) => {
+                console.error('canvasToTempFilePath failed:', err);
+              }
+            });
+          };
+          img.src = imagePath;
         });
+    },
+  
+    startPrediction() {
+      const { filteredImagePath } = this.data;
+      if (!filteredImagePath) {
+        wx.showToast({
+          title: '请先上传图片',
+          icon: 'none'
+        });
+        return;
       }
-    });
-  },
-
-  adjustImageData: function(imageData, width, height, brightness, contrast) {
-    const data = new Uint8ClampedArray(imageData);
-    for (let i = 0; i < data.length; i += 4) {
-      for (let j = 0; j < 3; j++) { // 调整R、G、B通道
-        data[i + j] = this.clamp(data[i + j] * contrast + brightness);
-      }
+  
+      wx.showToast({
+        title: '开始预测...',
+        icon: 'loading'
+      });
+  
+      setTimeout(() => {
+        wx.showToast({
+          title: '预测完成',
+          icon: 'success'
+        });
+      }, 2000);
     }
-    return data;
-  },
-
-  clamp: function(value) {
-    return Math.max(0, Math.min(255, value));
-  },
-
-  startPrediction: function() {
-    wx.showModal({
-      title: '预测结果',
-      content: '这是皮肤病。',
-      showCancel: false
-    });
-  }
-});
+  });
+  

@@ -1,10 +1,10 @@
 <view class="container">
-  <button bindtap="chooseImage">上传图片</button>
-  <view class="upload-area" bindtap="chooseImage">
-    <image wx:if="{{imagePath}}" src="{{imagePath}}" mode="aspectFit" class="uploaded-image"/>
-    <text wx:if="{{!imagePath}}" class="plus-sign">+</text>
+  <button bindtap="chooseMedia">上传图片</button>
+  <view class="upload-area" bindtap="chooseMedia">
+    <image wx:if="{{filteredImagePath}}" src="{{filteredImagePath}}" mode="aspectFit" class="uploaded-image"/>
+    <text wx:if="{{!filteredImagePath}}" class="plus-sign">+</text>
   </view>
-  <canvas canvas-id="imageCanvas" style="display:none"></canvas>
+  <canvas id="imageCanvas" type="2d" style="display:none" width="{{canvasWidth}}" height="{{canvasHeight}}"></canvas>
   <view class="slider-container">
     <text>亮度</text>
     <slider min="-100" max="100" show-value value="{{brightness}}" bindchange="onBrightnessChange"/>
@@ -15,4 +15,3 @@
   </view>
   <button bindtap="startPrediction">开始预测</button>
 </view>
-
