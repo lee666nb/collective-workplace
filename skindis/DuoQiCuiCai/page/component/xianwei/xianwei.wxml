@@ -4,5 +4,15 @@
     <image wx:if="{{imagePath}}" src="{{imagePath}}" mode="aspectFit" class="uploaded-image"/>
     <text wx:if="{{!imagePath}}" class="plus-sign">+</text>
   </view>
+  <canvas canvas-id="imageCanvas" style="display:none"></canvas>
+  <view class="slider-container">
+    <text>亮度</text>
+    <slider min="-100" max="100" show-value value="{{brightness}}" bindchange="onBrightnessChange"/>
+  </view>
+  <view class="slider-container">
+    <text>对比度</text>
+    <slider min="0.5" max="3" show-value value="{{contrast}}" bindchange="onContrastChange"/>
+  </view>
   <button bindtap="startPrediction">开始预测</button>
 </view>
+
