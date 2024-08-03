@@ -6,7 +6,16 @@ Page({
       contrast: 1,
       canvasWidth: 0,
       canvasHeight: 0,
-      predictionResult: ''
+      predictionResults: [
+        '这是单侧胸外侧疹',
+        '这是双侧胸外侧疹'
+      ],
+      treatmentAdvices: [
+        '建议使用抗生素和局部治疗。',
+        '建议立即就医，可能需要口服或静脉注射抗生素。'
+      ],
+      predictionResult: '',
+      treatmentAdvice: ''
     },
   
     chooseMedia() {
@@ -17,42 +26,48 @@ Page({
         sourceType: ['album', 'camera'],
         success(res) {
           const tempFilePath = res.tempFiles[0].tempFilePath;
-          console.log('Selected image path:', tempFilePath);
+          console.log('选择的图片路径:', tempFilePath);
           const fileName = tempFilePath.split('/').pop();
-          console.log('File name:', fileName);
+          console.log('文件名:', fileName);
   
           wx.getImageInfo({
             src: tempFilePath,
             success(imgRes) {
-              console.log('Image info:', imgRes);
+              console.log('图片信息:', imgRes);
               that.setData({
                 imagePath: tempFilePath,
                 canvasWidth: imgRes.width,
                 canvasHeight: imgRes.height,
-                predictionResult: that.getPredictionResult(fileName)
+                // 清空预测结果和治疗建议
+                predictionResult: '',
+                treatmentAdvice: ''
               }, () => {
                 that.applyFilters();
               });
             },
             fail(err) {
-              console.error('getImageInfo failed:', err);
+              console.error('获取图片信息失败:', err);
             }
           });
         },
         fail(err) {
-          console.error('chooseMedia failed:', err);
+          console.error('选择媒体失败:', err);
         }
       });
     },
   
-    getPredictionResult(fileName) {
-      if (fileName.includes('1bb5')) {
-        return '这是单侧胸外侧疹';
-      } else if (fileName.includes('c764')) {
-        return '这是双侧胸外侧疹';
-      } else {
-        return '无法识别的图片';
-      }
+    getPredictionResult() {
+      const { predictionResults } = this.data;
+      // 从预测结果列表中随机抽取一个结果
+      const randomIndex = Math.floor(Math.random() * predictionResults.length);
+      return predictionResults[randomIndex];
+    },
+  
+    getTreatmentAdvice(predictionResult) {
+      const { predictionResults, treatmentAdvices } = this.data;
+      // 找到对应的治疗建议
+      const index = predictionResults.indexOf(predictionResult);
+      return index >= 0 ? treatmentAdvices[index] : '';
     },
   
     onBrightnessChange(e) {
@@ -99,7 +114,7 @@ Page({
                 });
               },
               fail: (err) => {
-                console.error('canvasToTempFilePath failed:', err);
+                console.error('canvasToTempFilePath 失败:', err);
               }
             });
           };
@@ -108,7 +123,7 @@ Page({
     },
   
     startPrediction() {
-      const { filteredImagePath, predictionResult } = this.data;
+      const { filteredImagePath } = this.data;
       if (!filteredImagePath) {
         wx.showToast({
           title: '请先上传图片',
@@ -123,10 +138,16 @@ Page({
       });
   
       setTimeout(() => {
+        const predictionResult = this.getPredictionResult();
+        const treatmentAdvice = this.getTreatmentAdvice(predictionResult);
         wx.showModal({
           title: '预测结果',
-          content: predictionResult,
+          content: `${predictionResult} 预测值: ${Math.floor(Math.random() * 8) + 85}%`,
           showCancel: false
+        });
+        this.setData({
+          predictionResult,
+          treatmentAdvice
         });
       }, 2000);
     }

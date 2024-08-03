@@ -17,29 +17,29 @@
     "enablePullDownRefresh": true
   },
   "tabBar": {
-    "color": "#b7b7b7",
-    "selectedColor": "#87d0e3",
+    "color": "bfbfbf",
+    "selectedColor": "#bfbfbf",
     "borderStyle": "black",
-    "backgroundColor": "#006400",
+    "backgroundColor": "#007bff",
     "list": [{
       "pagePath": "page/component/index",
-      "iconPath": "image/home.png",
-      "selectedIconPath": "image/home_selected.png",
+      "iconPath": "image/home_selected.png",
+      "selectedIconPath": "image/home.png",
       "text": "首页"
     }, {
       "pagePath": "page/component/xianwei/xianwei",
-      "iconPath": "image/category.png",
-      "selectedIconPath": "image/category_selected.png",
+      "iconPath": "image/diagnosis-selected.png",
+      "selectedIconPath": "image/diagnosis.png",
       "text": "皮肤病诊断"
     }, {
       "pagePath": "page/component/run/run",
-      "iconPath": "image/run.png",
-      "selectedIconPath": "image/run.png",
+      "iconPath": "image/treat.png",
+      "selectedIconPath": "image/treat-selected.png",
       "text": "治疗方案"
     }, {
       "pagePath": "page/component/user/user",
-      "iconPath": "image/me.png",
-      "selectedIconPath": "image/me_selected.png",
+      "iconPath": "image/me_selected.png",
+      "selectedIconPath": "image/me.png",
       "text": "个人中心"
     }]
   },

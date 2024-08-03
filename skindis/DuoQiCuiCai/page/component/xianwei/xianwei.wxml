@@ -14,4 +14,7 @@
     <slider min="0.5" max="3" show-value value="{{contrast}}" bindchange="onContrastChange"/>
   </view>
   <button bindtap="startPrediction">开始预测</button>
+  <view wx:if="{{treatmentAdvice}}" class="result-display">
+    <text>{{treatmentAdvice}}</text>
+  </view>
 </view>

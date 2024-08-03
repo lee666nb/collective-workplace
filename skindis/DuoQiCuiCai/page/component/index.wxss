@@ -7,7 +7,9 @@
   border-radius: 15px;  
   padding: 30rpx; 
   overflow: hidden;  
-  margin: 0 auto; /* 居中容器 */  
+  margin: 0rpx auto; /* 居中容器 */  
+  margin-top: 25rpx;
+  margin-bottom: 10rpx;
 }  
 
 /* 头部样式 */  
@@ -100,10 +102,11 @@
 
 /* 底部样式 */  
 .footer {  
-  margin-top: 20px;  
+  margin-top: 20rpx;  
+  margin-bottom: 10rpx;
   text-align: center;  
-  padding-top: 10px;  
-  border-top: 1px solid #E0E0E0;  
+  padding-top: 10rpx;  
+  border-top: 1rpx solid #E0E0E0;  
 }  
 
 .footer-text {  
