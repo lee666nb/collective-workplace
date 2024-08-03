@@ -8,11 +8,15 @@ Page({
       canvasHeight: 0,
       predictionResults: [
         '这是单侧胸外侧疹',
-        '这是双侧胸外侧疹'
+        '这是双侧胸外侧疹',
+        '湿疹',
+        '接触性荨麻疹'
       ],
       treatmentAdvices: [
         '建议使用抗生素和局部治疗。',
-        '建议立即就医，可能需要口服或静脉注射抗生素。'
+        '建议立即就医，可能需要口服或静脉注射抗生素。',
+        '建议涂抹皮质类固醇软膏',
+        '可考虑使用免疫调节剂或类固醇'
       ],
       predictionResult: '',
       treatmentAdvice: ''
