@@ -1,7 +1,7 @@
 
 <view class="container">  
   <view class="header">  
-    <image src="your-logo.png" mode="widthFix"></image> <!-- 假设有logo -->  
+    <image mode="widthFix"></image> <!-- 假设有logo -->  
     <text class="title">皮肤病预测专家</text>  
   </view>  
   

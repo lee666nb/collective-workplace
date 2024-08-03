@@ -45,9 +45,7 @@
       <view>
         <navigator url="/page/component/register/register" class="navagator" >注册</navigator>
      </view>
-     <view>
-        <navigator url="/page/component/findpassword/findpassword" class="navagator"  style="width: 120rpx; height: 30rpx; display: block; box-sizing: border-box">找回密码</navigator>
-     </view>
+    
     </view>
   </view>
 </view>

@@ -7,8 +7,7 @@
       "page/component/run/run",
       "page/component/user/user",
       "page/component/aboutUs/aboutUs",
-      "page/component/updateLog/updateLog",
-       "page/component/findpassword/findpassword"
+      "page/component/updateLog/updateLog"
   ],
   "window": {
     "navigationBarTextStyle": "white",
@@ -50,6 +49,6 @@
     "uploadFile": 10000,
     "downloadFile": 10000
   },
-  "debug": false
-  
+  "debug": false,
+  "lazyCodeLoading": "requiredComponents"
 }
