@@ -98,7 +98,7 @@ Page({
       }
   
       wx.showToast({
-        title: '开始预测...',
+        title: '开始诊断...',
         icon: 'loading'
       });
   
@@ -113,5 +113,14 @@ Page({
             accuracy
         });
     }, 2000);
+    },
+    clearData() {
+        this.setData({
+            filteredImagePath: '',
+            predictionResult: '',
+            treatmentAdvice: '',
+            accuracy: 0
+        });
     }
+
   });

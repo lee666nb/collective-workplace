@@ -4,9 +4,11 @@
     <image wx:if="{{filteredImagePath}}" src="{{filteredImagePath}}" mode="aspectFit" class="uploaded-image"/>
     <text wx:if="{{!filteredImagePath}}" class="plus-sign">+</text>
   </view>
-  <view>
-  <button class="button1" bindtap="chooseMedia">上传图片</button>
+
+  <view class="button-container">
+    <button class="button1" bindtap="chooseMedia">上传图片</button>
   <button class="button2" bindtap="startPrediction">开始诊断</button>
+  <button class="button3" bindtap="clearData">清空</button>
   </view>
   
   
