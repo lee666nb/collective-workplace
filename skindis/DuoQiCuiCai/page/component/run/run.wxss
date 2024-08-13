@@ -30,7 +30,7 @@
   
   .search-button {
     padding: 5rpx 20rpx;
-    height: 95rpx;
+    height: 100rpx;
     background-color: #007bff;
     color: #fff;
     border: none;
