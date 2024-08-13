@@ -34,7 +34,7 @@
   .search-button {
     padding: 1rpx 15px;
     margin-left: 10rpx;
-    margin-right: 10rpx;
+    margin-right: 15rpx;
     margin-bottom: 1rpx;
     background-color: #007BFF;
     color: white;
