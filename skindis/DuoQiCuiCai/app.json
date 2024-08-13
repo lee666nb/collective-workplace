@@ -35,7 +35,7 @@
       "pagePath": "page/component/run/run",
       "iconPath": "image/treat.png",
       "selectedIconPath": "image/treat-selected.png",
-      "text": "治疗方案"
+      "text": "皮肤病查询"
     }, {
       "pagePath": "page/component/user/user",
       "iconPath": "image/me_selected.png",
