@@ -17,19 +17,22 @@
     <!-- 文本展示区域 -->
     <view class="text-content">
         <block wx:if="{{selectedDisease}}">
-            <view class="card">
-                <image src="{{selectedDisease.image}}" class="card-image"></image>
-                <view class="card-text">
-                    <view class="heading">{{selectedDisease.name}}</view>
-                    <view>{{selectedDisease.description}}</view>
-                </view>
+            <!-- 皮肤病名称框 -->
+            <view class="fixed-box">
+                <view class="fixed-title">皮肤病名称</view>
+                <view class="fixed-content">{{selectedDisease.name}}</view>
+                <view class="description">{{selectedDisease.description}}</view>
             </view>
 
-            <view class="card" wx:for="{{selectedDisease.treatments}}" wx:key="*this">
-                <view class="card-text">
-                    <view class="subheading">{{item.type}}</view>
-                    <view>{{item.details}}</view>
-                </view>
+            <!-- 治疗药物或治疗措施框 -->
+            <view class="fixed-box">
+                <view class="fixed-title">治疗药物或治疗措施</view>
+                <block wx:for="{{selectedDisease.treatments}}" wx:key="*this">
+                    <view class="treatment-item">
+                        <view class="treatment-type">{{item.type}}</view>
+                        <view class="treatment-details">{{item.details}}</view>
+                    </view>
+                </block>
             </view>
         </block>
 
