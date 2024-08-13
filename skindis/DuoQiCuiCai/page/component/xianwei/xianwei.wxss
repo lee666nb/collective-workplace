@@ -2,23 +2,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 40rpx; /* 增大 margin-top */
+    margin-top: 40rpx;
 }
 
 .upload-area {
-    width: 500rpx; /* 增大宽度 */
-    height: 500rpx; /* 增大高度 */
-    border: 4rpx dashed #ccc; /* 增大边框 */
+    width: 500rpx;
+    height: 500rpx;
+    border: 4rpx dashed #ccc;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40rpx; /* 增大 margin-top */
+    margin-top: 40rpx;
     position: relative;
     background-color: #f9f9f9;
 }
 
 .plus-sign {
-    font-size: 70rpx; /* 增大字体大小 */
+    font-size: 70rpx;
     color: #ccc;
 }
 
@@ -27,26 +27,54 @@
     max-height: 100%;
 }
 
-.slider-container {
-    width: 500rpx; /* 增大宽度 */
-    margin-top: 40rpx; /* 增大 margin-top */
-}
-
-canvas {
-    display: none;
-}
-
 .result-display {
     position: fixed;
-    bottom: 20rpx;
+    bottom: 40rpx; /* 调整位置 */
     left: 20rpx;
     right: 20rpx;
-    padding: 20rpx;
+    padding: 40rpx; /* 增加内边距，使框变大 */
     background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10rpx;
-    box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.3);
+    border-radius: 20rpx; /* 增大圆角 */
+    box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.3); /* 增大阴影 */
     color: #fff;
-    font-size: 28rpx;
+    font-size: 36rpx; /* 增大字体大小 */
     text-align: center;
-  }
-  
+    z-index: 1000; /* 保证在最前面显示 */
+}
+
+.result-heading {
+    font-size: 36rpx;
+    font-weight: bold;
+    margin-bottom: 20rpx;
+}
+
+.disease-name {
+    font-size: 34rpx;
+    color: #ff6347;
+    margin-bottom: 16rpx;
+}
+
+.treatment-advice {
+    font-size: 28rpx;
+    color: #555;
+}
+
+.accuracy-degree{
+    color: violet;
+}
+
+.treatment-advice{
+    color:yellow;
+    padding-top: 10rpx;
+}
+
+.button1{
+    margin-top: 10rpx;
+    color: white;
+    background-color:orange;
+}
+.button2{
+   margin-top: 10rpx;
+   color: white;
+   background-color:green;
+}

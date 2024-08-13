@@ -1,20 +1,19 @@
 <view class="container">
-  <button bindtap="chooseMedia">上传图片</button>
+  
   <view class="upload-area" bindtap="chooseMedia">
     <image wx:if="{{filteredImagePath}}" src="{{filteredImagePath}}" mode="aspectFit" class="uploaded-image"/>
     <text wx:if="{{!filteredImagePath}}" class="plus-sign">+</text>
   </view>
-  <canvas id="imageCanvas" type="2d" style="display:none" width="{{canvasWidth}}" height="{{canvasHeight}}"></canvas>
-  <view class="slider-container">
-    <text>亮度</text>
-    <slider min="-100" max="100" show-value value="{{brightness}}" bindchange="onBrightnessChange"/>
+  <view>
+  <button class="button1" bindtap="chooseMedia">上传图片</button>
+  <button class="button2" bindtap="startPrediction">开始诊断</button>
   </view>
-  <view class="slider-container">
-    <text>对比度</text>
-    <slider min="0.5" max="3" show-value value="{{contrast}}" bindchange="onContrastChange"/>
-  </view>
-  <button bindtap="startPrediction">开始预测</button>
-  <view wx:if="{{treatmentAdvice}}" class="result-display">
-    <text>{{treatmentAdvice}}</text>
+  
+  
+  <view wx:if="{{predictionResult}}" class="result-display">
+    <view class="result-heading">诊断结果</view>
+    <view class="disease-name">{{predictionResult}}</view>
+    <view class="accuracy-degree">诊断准确度: {{accuracy}}%</view>
+    <view class="treatment-advice">治疗措施：{{treatmentAdvice}}</view>
   </view>
 </view>
