@@ -1,77 +1,88 @@
 .container {
-  display: flex;
-  flex-direction: column;
-}
-
-.swiper {
-  width: 100%;
-  height: 200px; /* 根据需要调整高度 */
-}
-
-.slide-image {
-  width: 100%;
-  height: 100%;
-}
-
-.text-area {
-  padding: 10px;
-  text-align: justify;
-}
-.text-content {
-  font-family: "Arial", sans-serif; /* 优雅的字体 */
-  color: #333; /* 深色字体更易阅读 */
-  padding: 20px;
-  line-height: 1.6; /* 行间距 */
-  font-size: 13px; /* 字体大小 */
-}
-
-
-
-.text-content {
-  padding: 16px;
-}
-
-.card {
-  background-color: #fff;
-  padding: 16px;
-  margin-bottom: 16px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px 8px 0 0;
-  margin-bottom: 16px;
-}
-
-.card-text {
-  margin-top: 16px;
-}
-
-.heading {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 12px;
-}
-
-.subheading {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.list {
-  padding-left: 20px;
-  margin-top: 8px;
-}
-
-.list text {
-  display: block;
-  margin-bottom: 8px;
-}
-
-strong {
-  color: #2c7a7b; /* 强调颜色 */
-}
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 300rpx;
+  }
+  
+  .slide-image {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .search-box {
+    display: flex;
+    padding: 20rpx;
+    margin-top: 20rpx;
+    align-items: center;
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 10rpx;
+    border: 1rpx solid #ccc;
+    border-radius: 8rpx;
+    margin-right: 10rpx;
+  }
+  
+  .search-button {
+    padding: 5rpx 20rpx;
+    height: 95rpx;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8rpx;
+  }
+  
+  .text-content {
+    padding: 16rpx;
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 16rpx;
+    margin-bottom: 16rpx;
+    border-radius: 8rpx;
+    box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8rpx 8rpx 0 0;
+    margin-bottom: 16rpx;
+  }
+  
+  .card-text {
+    margin-top: 16rpx;
+  }
+  
+  .heading {
+    font-size: 18rpx;
+    font-weight: bold;
+    margin-bottom: 12rpx;
+  }
+  
+  .subheading {
+    font-size: 16rpx;
+    font-weight: bold;
+    margin-bottom: 8rpx;
+  }
+  
+  .list {
+    padding-left: 20rpx;
+    margin-top: 8rpx;
+  }
+  
+  .list text {
+    display: block;
+    margin-bottom: 8rpx;
+  }
+  
+  strong {
+    color: #2c7a7b;
+  }
+  
