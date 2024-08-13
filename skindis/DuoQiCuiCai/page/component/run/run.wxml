@@ -37,7 +37,7 @@
         </block>
 
         <block wx:else>
-            <view>请输入皮肤病名称进行搜索。</view>
+            <view class="tip">请输入皮肤病名称进行搜索!!!</view>
         </block>
     </view>
 </view>
