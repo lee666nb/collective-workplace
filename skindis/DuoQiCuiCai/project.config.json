@@ -16,7 +16,12 @@
     "coverView": false,
     "enhance": false,
     "showShadowRootInWxmlPanel": false,
-    "packNpmRelationList": []
+    "packNpmRelationList": [],
+    "condition": false,
+    "swc": false,
+    "compileWorklet": false,
+    "minifyWXSS": true,
+    "minifyWXML": true
   },
   "compileType": "miniprogram",
   "condition": {},
@@ -25,9 +30,12 @@
     "tabSize": 2
   },
   "appid": "wx8dace481fc200135",
-  "libVersion": "2.25.3",
+  "libVersion": "3.5.3",
   "packOptions": {
     "ignore": [],
     "include": []
-  }
+  },
+  "projectname": "DuoQiCuiCai",
+  "packNpmManually": false,
+  "simulatorPluginLibVersion": {}
 }

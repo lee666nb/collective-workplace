@@ -4,7 +4,14 @@
     align-items: center;
     margin-top: 40rpx;
 }
-
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    object-fit: cover; /* 使图片覆盖整个容器 */
+  }
 .upload-area {
     width: 500rpx;
     height: 500rpx;
@@ -68,39 +75,40 @@
     padding-top: 10rpx;
 }
 
-.button1{
+.button1 {
     margin-top: 10rpx;
     color: green;
-    background-color:orange;
-}
-.button2{
-   margin-top: 10rpx;
-   color: white;
-   background-color:green;
+    background-color: orange;
 }
 
-.button3{
+.button2 {
+    margin-top: 10rpx;
+    color: white;
+    background-color: green;
+}
+
+.button3 {
     margin-top: 10rpx;
     color: yellow;
-    background-color:red;
+    background-color: red;
 }
-
 
 .button-container {
     display: flex; /* 使用 flexbox 布局 */
     justify-content: space-between; /* 均匀分布 */
-    width: 100%; /* 使按钮容器宽度为 100% */
+    width: 90%; /* 使按钮容器宽度为 90% */
     max-width: 800rpx; /* 设置最大宽度 */
     margin-top: 20rpx; /* 上方间距 */
-    padding: 0 20rpx; /* 左右内边距 */
+    padding: 10rpx 20rpx; /* 左右内边距 */
 }
 
 .button1, .button2, .button3 {
     flex: 1; /* 使按钮均匀分布 */
-    margin: 0 10rpx; /* 设置按钮间距 */
-    padding: 20rpx; /* 增大按钮内边距 */
+    margin: 0 20rpx; /* 增加按钮左右间距 */
+    padding: 30rpx; /* 增大按钮内边距 */
     border: none;
     border-radius: 8rpx;
     font-size: 30rpx; /* 放大字体大小 */
     text-align: center; /* 中心对齐文字 */
 }
+

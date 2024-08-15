@@ -1,5 +1,5 @@
 <view class="container">
-  
+    <image class="background-image" src="/image/pie-bg.png" />
   <view class="upload-area" bindtap="chooseMedia">
     <image wx:if="{{filteredImagePath}}" src="{{filteredImagePath}}" mode="aspectFit" class="uploaded-image"/>
     <text wx:if="{{!filteredImagePath}}" class="plus-sign">+</text>

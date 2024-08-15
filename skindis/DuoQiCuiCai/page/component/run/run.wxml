@@ -1,4 +1,5 @@
 <view class="container">
+    <image class="background-image" src="/image/pie-bg.png" />
     <!-- 图片滑动窗口 -->
     <swiper class="swiper" indicator-dots="true" autoplay="true" interval="3000" circular="true">
         <block wx:for="{{imageList}}" wx:key="*this">

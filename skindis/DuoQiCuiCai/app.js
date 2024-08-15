@@ -25,7 +25,7 @@ App({
       cartTotalNum: 0,
       userInfo: null
     },
-    
+
     // 用于更新用户信息并保存到本地存储
     setUserInfo: function(userInfo) {
       this.globalData.userInfo = userInfo;
