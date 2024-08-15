@@ -1,4 +1,4 @@
-import * as echarts from '../../ec-canvas/echarts';
+import * as echarts from '../../../ec-canvas/echarts';
 const app = getApp();
 
 function initChart(canvas, width, height, dpr) {
@@ -145,10 +145,32 @@ function initChart2(canvas, width, height, dpr) {
                 color: '#235894',
                 fontSize: 15 
             },
-            left: 'right',        // 将标题移动到右边
-            top: 'top'            // 将标题放置在顶部
+            left: 'right',
+            top: 'top'
         },
-        tooltip: {},
+        tooltip: {
+            trigger: 'item',
+            padding: [5, 10],  // 减小弹出框的内边距
+            textStyle: {
+                fontSize: 12    // 减小字体大小
+            },
+            formatter: '{b}: {c} ({d}%)',  // 格式化显示内容
+            position: function (point, params, dom, rect, size) {
+                // 获取提示框的大小
+                var tooltipWidth = size.contentSize[0];
+                var tooltipHeight = size.contentSize[1];
+
+                // 获取饼图中心位置
+                var centerX = size.viewSize[0] / 2;
+                var centerY = size.viewSize[1] / 2;
+
+                // 调整提示框的位置，使其尽量靠近中心
+                return [
+                    centerX - tooltipWidth / 2, 
+                    centerY - tooltipHeight / 2
+                ];
+            }
+        },
         series: [
             {
                 name: 'pie',
@@ -193,6 +215,8 @@ function initChart2(canvas, width, height, dpr) {
 
     return chart;
 }
+
+
 
 
 function initChart3(canvas, width, height, dpr) {

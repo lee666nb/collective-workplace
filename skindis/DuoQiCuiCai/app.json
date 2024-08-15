@@ -1,9 +1,8 @@
 {
   "pages": [
     "page/component/login/login",
-    "page/line/index",
     "page/component/register/register",
-      "page/component/index",
+    "page/component/index/index",
       "page/component/xianwei/xianwei",
       "page/component/run/run",
       "page/component/user/user",
@@ -23,7 +22,7 @@
     "borderStyle": "black",
     "backgroundColor": "#007bff",
     "list": [{
-      "pagePath": "page/component/index",
+      "pagePath": "page/component/index/index",
       "iconPath": "image/home_selected.png",
       "selectedIconPath": "image/home.png",
       "text": "首页"

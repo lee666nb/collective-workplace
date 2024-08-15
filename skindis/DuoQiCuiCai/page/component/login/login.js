@@ -69,7 +69,7 @@ Page({
                 })           
                 setTimeout(function () {         
                 wx.reLaunch({          
-                url: '/page/component/index',          
+                url: '/page/component/index/index',          
                 })       
                 }, 1000)
         }else{
@@ -102,7 +102,7 @@ Page({
                 })           
                 setTimeout(function () {         
                 wx.reLaunch({          
-                url: '/page/component/index',          
+                url: '/page/component/index/index',          
                 })       
                 }, 1000)
         }else{
