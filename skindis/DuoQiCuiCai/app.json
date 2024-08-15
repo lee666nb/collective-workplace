@@ -1,6 +1,7 @@
 {
   "pages": [
     "page/component/login/login",
+    "page/line/index",
     "page/component/register/register",
       "page/component/index",
       "page/component/xianwei/xianwei",
@@ -50,5 +51,6 @@
     "downloadFile": 10000
   },
   "debug": false,
-  "lazyCodeLoading": "requiredComponents"
+  "lazyCodeLoading": "requiredComponents",
+  "style": "v2"
 }
