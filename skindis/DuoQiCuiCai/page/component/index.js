@@ -22,7 +22,7 @@ function initChart(canvas, width, height, dpr) {
         },
         // backgroundColor: "#ffffff",
         title: {
-            text: '加载图片',
+            text: '各类皮肤病的患病年龄段(柱状图)',
             textStyle: {
                 color: '#235894',
                 fontSize: 15 // 调整标题字体大小
@@ -30,49 +30,83 @@ function initChart(canvas, width, height, dpr) {
             left: 'right',        // 将标题移动到右边
             top: 'top'            // 将标题放置在顶部
         },
-        legend: {
-            data: ['A', 'B', 'C'],
-            top: 10,
-            left: 'center',
-            backgroundColor: 'red',
-            z: 10
+        // legend: {
+        //     data: ['A', 'B', 'C'],
+        //     top: 10,
+        //     left: 'center',
+        //     backgroundColor: 'red',
+        //     z: 10
+        // },
+        // grid: {
+        //     containLabel: true
+        // },
+        // tooltip: {
+        //     show: true,
+        //     trigger: 'axis'
+        // },
+        // xAxis: {
+        //     type: 'category',
+        //     boundaryGap: false,
+        //     data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+        // },
+        // yAxis: {
+        //     type: 'value',
+        //     splitLine: {
+        //         lineStyle: {
+        //             type: 'dashed'
+        //         }
+        //     }
+        // },
+        // series: [{
+        //     name: 'A',
+        //     type: 'line',
+        //     smooth: true,
+        //     data: [18, 36, 65, 30, 78, 40, 33]
+        // }, {
+        //     name: 'B',
+        //     type: 'line',
+        //     smooth: true,
+        //     data: [12, 50, 51, 35, 70, 30, 20]
+        // }, {
+        //     name: 'C',
+        //     type: 'line',
+        //     smooth: true,
+        //     data: [10, 30, 31, 50, 40, 20, 10]
+        // }]
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'shadow'
+          }
         },
         grid: {
-            containLabel: true
+          left: '3%',
+          right: '4%',
+          bottom: '3%',
+          containLabel: true
         },
-        tooltip: {
-            show: true,
-            trigger: 'axis'
-        },
-        xAxis: {
+        xAxis: [
+          {
             type: 'category',
-            boundaryGap: false,
-            data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
-        },
-        yAxis: {
-            type: 'value',
-            splitLine: {
-                lineStyle: {
-                    type: 'dashed'
-                }
+            data: ['0-9岁', '10-19岁', '20-29岁', '30-39岁 ', '40-49岁', '50-59岁', '60岁及以上'],
+            axisTick: {
+              alignWithLabel: true
             }
-        },
-        series: [{
-            name: 'A',
-            type: 'line',
-            smooth: true,
-            data: [18, 36, 65, 30, 78, 40, 33]
-        }, {
-            name: 'B',
-            type: 'line',
-            smooth: true,
-            data: [12, 50, 51, 35, 70, 30, 20]
-        }, {
-            name: 'C',
-            type: 'line',
-            smooth: true,
-            data: [10, 30, 31, 50, 40, 20, 10]
-        }]
+          }
+        ],
+        yAxis: [
+          {
+            type: 'value'
+          }
+        ],
+        series: [
+          {
+            name: 'Direct',
+            type: 'bar',
+            barWidth: '60%',
+            data: [10, 52, 200, 334, 390, 330, 220]
+          }
+        ]
     };
 
     try {
@@ -106,10 +140,10 @@ function initChart2(canvas, width, height, dpr) {
             repeat: 'repeat'
         },
         title: {
-            text: '加载图片',
+            text: '皮肤病类型分布（饼状图）',
             textStyle: {
                 color: '#235894',
-                fontSize: 15 // 调整标题字体大小
+                fontSize: 15 
             },
             left: 'right',        // 将标题移动到右边
             top: 'top'            // 将标题放置在顶部
@@ -132,11 +166,11 @@ function initChart2(canvas, width, height, dpr) {
                     }
                 },
                 data: [
-                    { value: 1048, name: 'Search Engine' },
-                    { value: 735, name: 'Direct' },
-                    { value: 580, name: 'Email' },
-                    { value: 484, name: 'Union Ads' },
-                    { value: 300, name: 'Video Ads' }
+                    { value: 1048, name: '湿疹 (Eczema)：33%' },
+                    { value: 735, name: '痤疮 (Acne): 25%' },
+                    { value: 580, name: '荨麻疹 (Urticaria): 15%' },
+                    { value: 484, name: '皮肤癌 (Skin Cancer): 17%' },
+                    { value: 300, name: '其他 (Others): 10%' }
                 ],
                 itemStyle: {
                     opacity: 0.7,
@@ -177,13 +211,13 @@ function initChart3(canvas, width, height, dpr) {
     const bgPatternSrc = '/image/pie-bg.png';
     const option = {
         title: {
-            text: '加载图片',
+            text: '皮肤病高发地区分布（环形图）',
             textStyle: {
                 color: '#235894',
-                fontSize: 15 // 调整标题字体大小
+                fontSize: 15 
             },
-            left: 'right',        // 将标题移动到右边
-            top: 'top'            // 将标题放置在顶部
+            left: 'right',        
+            top: 'top'            
         },
         backgroundColor: {
             image: bgPatternSrc,
