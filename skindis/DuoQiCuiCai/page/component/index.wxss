@@ -1,39 +1,122 @@
+/* 容器样式 */
 .container {
-  padding: 20rpx;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
 }
 
-.header {
-  text-align: center;
-  margin-bottom: 40rpx;
+/* 功能卡片样式 */
+.feature-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30rpx;
 }
 
-.title {
-  font-size: 36rpx;
-  font-weight: bold;
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 40rpx;
+    width: 32%;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.chart-container {
-  margin-bottom: 40rpx;
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: 30rpx;
-}
-
-.feature-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 150rpx;
-  background-color: #f5f5f5;
-  border-radius: 20rpx;
-  box-shadow: 0 10rpx 20rpx rgba(0, 0, 0, 0.1);
-  cursor: pointer;
+.card:active {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card-title {
-  font-size: 30rpx;
-  color: #333;
+    font-size: 24rpx;
+    font-weight: 700;
+    margin-bottom: 20rpx;
+    color: #4A4A4A;
+    text-align: center;
+}
+
+.card-description {
+    font-size: 16rpx;
+    color: #999999;
+    text-align: center;
+}
+
+/* 图表容器样式 */
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 30rpx;
+    position: relative; /* 确保图表使用绝对定位时相对于容器定位 */
+}
+
+.chart-placeholder {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 550rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999999;
+    font-size: 16rpx;
+    margin-bottom: 30rpx;
+    position: relative;
+}
+
+
+
+
+/* 图表样式 */
+ec-canvas {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 固定图表样式 */
+
+
+.fixed-chart1 {
+    position: absolute;
+  left: 3%;
+  top: 15%;
+  width: 700rpx;
+  height: 480rpx;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+
+}
+.fixed-chart2 {
+    position: absolute;
+    top: 56%;
+    left: 3%;
+    width: 700rpx;
+    height: 480rpx;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+.fixed-chart3 {
+    position: absolute; 
+    top: 98%;
+    left: 3%;
+    width: 700rpx;
+    height: 480rpx;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }

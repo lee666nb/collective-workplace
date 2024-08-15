@@ -1,23 +1,32 @@
 <view class="container">
-  <view class="header">
-    <text class="title">皮肤病预测</text>
-  </view>
-
-  <view class="chart-container">
-    <ec-canvas id="pieChart" canvas-id="pieChart" ec="{{ ec }}"></ec-canvas>
-  </view>
-
-  <view class="main">
-    <view class="feature-card" bindtap="navigateToDiagnose">
-      <text class="card-title">自我诊断</text>
+  <view class="feature-cards">
+    <view class="card" bindtap="navigateToDiagnose">
+      <view>
+        <view class="card-title">自我诊断</view>
+        <view class="card-description">快速了解您的皮肤状况</view>
+      </view>
     </view>
 
-    <view class="feature-card" bindtap="navigateToKnowledge">
-      <text class="card-title">健康知识</text>
+    <view class="card" bindtap="navigateToKnowledge">
+      <view>
+        <view class="card-title">皮肤病查询</view>
+        <view class="card-description">了解关于皮肤病的症状以及治疗手段</view>
+      </view>
     </view>
 
-    <view class="feature-card" bindtap="navigateToProfile">
-      <text class="card-title">个人信息</text>
+    <view class="card" bindtap="navigateToProfile">
+      <view>
+        <view class="card-title">个人信息</view>
+        <view class="card-description">管理您的个人资料</view>
+      </view>
     </view>
   </view>
+
+ <ec-canvas  class="fixed-chart1" id="mychart-dom-load-image" canvas-id="mychart-load-image" ec="{{ ect }}"></ec-canvas>
+  <ec-canvas  class="fixed-chart2" id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ecs }}"></ec-canvas>
+  <ec-canvas  class="fixed-chart3" id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+ 
+  
+
+
 </view>
