@@ -1,41 +1,23 @@
+<view class="container">
+  <view class="header">
+    <text class="title">皮肤病预测</text>
+  </view>
 
-<view class="container">  
-  <view class="header">  
-    <image mode="widthFix"></image> <!-- 假设有logo -->  
-    <text class="title">皮肤病预测专家</text>  
-  </view>  
-  
-  <view class="main">  
-    <view class="welcome">  
-      <view class="welcome-text">欢迎使用皮肤病预测小程序</view>  
-      <view class="description">提供专业的皮肤病预测和护理建议</view>  
-    </view>  
-    
-    <view class="feature-cards">  
-      <view class="card" bindtap="navigateToDiagnose">  
-        <view>  
-          <view class="card-title">自我诊断</view>  
-          <view class="card-description">快速了解您的皮肤状况</view>  
-        </view>  
-      </view>  
-  
-      <view class="card" bindtap="navigateToKnowledge">  
-        <view>  
-          <view class="card-title">健康知识</view>  
-          <view class="card-description">皮肤病预防与护理</view  >  
-        </view>  
-      </view>  
-  
-      <view class="card" bindtap="navigateToProfile">  
-        <view>  
-          <view class="card-title">个人信息</view>  
-          <view class="card-description">管理您的个人资料</view>  
-        </view>  
-      </view>  
-    </view>  
-  </view>  
-  
-  <view class="footer">  
-    <text class="footer-text">皮肤病预测专家 © 2024</text>  
-  </view>  
-</view> 
+  <view class="chart-container">
+    <ec-canvas id="pieChart" canvas-id="pieChart" ec="{{ ec }}"></ec-canvas>
+  </view>
+
+  <view class="main">
+    <view class="feature-card" bindtap="navigateToDiagnose">
+      <text class="card-title">自我诊断</text>
+    </view>
+
+    <view class="feature-card" bindtap="navigateToKnowledge">
+      <text class="card-title">健康知识</text>
+    </view>
+
+    <view class="feature-card" bindtap="navigateToProfile">
+      <text class="card-title">个人信息</text>
+    </view>
+  </view>
+</view>
