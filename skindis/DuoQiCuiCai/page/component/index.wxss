@@ -1,115 +1,122 @@
-/* 容器样式 */  
-.container {  
-  width: 90%;  
-  max-width: 900px;  
-  background-color: #FFFFFF;  
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  
-  border-radius: 15px;  
-  padding: 30rpx; 
-  overflow: hidden;  
-  margin: 0rpx auto; /* 居中容器 */  
-  margin-top: 25rpx;
-  margin-bottom: 10rpx;
-}  
+/* 容器样式 */
+.container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
 
-/* 头部样式 */  
-.header {  
-  display: flex;  
-  align-items: center;  
-  margin-bottom: 20px;  
-  padding-bottom: 20px;  
-  border-bottom: 1px solid #E0E0E0;  
-}  
+/* 功能卡片样式 */
+.feature-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30rpx;
+}
 
-.header image {  
-  width: 50px;  
-  height: 50px;  
-  margin-right: 15px; /* 给标题留出空间 */  
-}  
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 40rpx;
+    width: 32%;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
-.title {  
-  font-size: 36px;  
-  font-weight: 700;  
-  color: rgb(39, 38, 38);  
-  margin-left: -23px;
-  text-decoration: none;
-  margin-top: 20px;
-}  
+.card:active {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
 
-/* 主内容区样式 */  
-.main {  
-  width: 100%;  
-}  
+.card-title {
+    font-size: 24rpx;
+    font-weight: 700;
+    margin-bottom: 20rpx;
+    color: #4A4A4A;
+    text-align: center;
+}
 
-.welcome {  
-  text-align: center;  
-  margin-bottom: 30px;  
-}  
+.card-description {
+    font-size: 16rpx;
+    color: #999999;
+    text-align: center;
+}
 
-.welcome-text {  
-  font-size: 24px;  
-  font-weight: 700;  
-  margin-bottom: 10rpx;  
-  color: #4A4A4A;  
-}  
+/* 图表容器样式 */
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 30rpx;
+    position: relative; /* 确保图表使用绝对定位时相对于容器定位 */
+}
 
-.description {  
-  font-size: 16px;  
-  color: #999999;  
-}  
+.chart-placeholder {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 550rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999999;
+    font-size: 16rpx;
+    margin-bottom: 30rpx;
+    position: relative;
+}
 
-/* 功能卡片样式 */  
-.feature-cards {  
-  display: flex;  
-  justify-content: space-around;  
-  flex-wrap: wrap;  
-}  
 
-.card {  
-  display: flex;  
-  flex-direction: column;  
-  align-items: center;  
-  background-color: #FFFFFF;  
-  border-radius: 10px;  
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);  
-  padding: 20px;  
-  width: 45%;  
-  max-width: 300px;  
-  cursor: pointer;  
-  transition: transform 0.3s, box-shadow 0.3s;  
-  margin: 10px;  
-}  
 
-.card:active {  
-  /* 替代:hover，因为微信小程序不支持:hover */  
-  transform: translateY(-5px);  
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);  
-}  
 
-.card-title {  
-  font-size: 20px;  
-  font-weight: 700;  
-  margin-bottom: 15rpx;  
-  color: #4A4A4A;  
-  text-align: center;
-}  
+/* 图表样式 */
+ec-canvas {
+    width: 100%;
+    height: 100%;
+}
 
-.card-description {  
-  font-size: 14px;  
-  color: #999999;  
-  text-align: center;  
-}  
 
-/* 底部样式 */  
-.footer {  
-  margin-top: 20rpx;  
-  margin-bottom: 10rpx;
-  text-align: center;  
-  padding-top: 10rpx;  
-  border-top: 1rpx solid #E0E0E0;  
-}  
+/* 固定图表样式 */
 
-.footer-text {  
-  font-size: 14px;  
-  color: #999999;  
-}  
+
+.fixed-chart1 {
+    position: absolute;
+  left: 3%;
+  top: 15%;
+  width: 700rpx;
+  height: 480rpx;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+
+}
+.fixed-chart2 {
+    position: absolute;
+    top: 56%;
+    left: 3%;
+    width: 700rpx;
+    height: 480rpx;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+.fixed-chart3 {
+    position: absolute; 
+    top: 98%;
+    left: 3%;
+    width: 700rpx;
+    height: 480rpx;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}

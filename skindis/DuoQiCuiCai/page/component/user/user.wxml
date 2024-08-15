@@ -1,4 +1,5 @@
 <view class="container">
+    <image class="background-image" src="/image/pie-bg.png" />
   <view class="header">
     <image src="/image/微信头像.png" class="avatar"></image>
     <text class="college">{{ userInfo.name }}</text>
